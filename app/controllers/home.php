@@ -1,9 +1,11 @@
 <?php
 
-Class Home
+Class Home extends Controller
 {
-    function index()
+    public function index()
     {
-
+        $this->view("sportClub/index");
     }
+
+
 }
