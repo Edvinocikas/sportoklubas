@@ -10,6 +10,9 @@ inputs[type=text], select, textarea {
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
+.color{
+    color: white;
+}
 
 
 
@@ -119,6 +122,7 @@ h2{
     word-wrap: break-word;
     text-align: center;
     padding-top: 10px;
+    background-color: #949494;
 }
 
 
@@ -313,7 +317,7 @@ a:hover { color:#009999; }
 .tm-mb-50 { margin-bottom: 50px; }
 .tm-mb-74 { margin-bottom: 74px; }
 .tm-mb-90 { margin-bottom: 90px; }
-.tm-text-primary { color: #009999; }
+.tm-text-primary { color: #b0ffff; }
 .tm-text-secondary { color: #CC6699; }
 a.tm-text-primary:hover { color:#666666; }
 .tm-bg-gray { background-color: #EEEEEE; }
@@ -329,7 +333,7 @@ a.tm-text-primary:hover { color:#666666; }
 .nav-item:last-child { margin-right: 0; }
 
 .nav-link {
-    color: #666666;
+    color: #cfcfcf;
     border-bottom: 4px solid transparent;
     font-size: 1.2rem;
 }

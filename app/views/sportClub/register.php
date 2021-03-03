@@ -1,36 +1,44 @@
-<?php $this->view("sportClub/header"); ?>
+<?php $this->view("sportClub/header", $data); ?>
 
-    <form action="action_page.php">
-        <div class="container">
-            <h1>Registruotis</h1>
-            <p>Norėdami sukurti paskyrą, užpildykite šią formą.</p>
-            <hr>
+    <div style="margin: auto; max-width: 600px;width: 100%;padding: 2em;">
 
-            <label for="email"><b>Vardas</b></label>
-            <input type="text" placeholder="Iveskite Vardą" name="name" id="name" required>
+        <form method="post">
+            <div class="form-group">
+                <label for="exampleInputEmail1"><b>Vardas</b></label>
+                <input name="name" type="text" class="form-control" id="exampleInputEmail1"
+                       aria-describedby="emailHelp" placeholder="Iveskite Vardą">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1"><b>Pavardė</b></label>
+                <input name="surname" type="text" class="form-control" id="exampleInputPassword1"
+                       placeholder="Iveskite Pavardę">
+            </div>
+            <div class="form-group">El.paštas<label for="exampleInputPassword1"></label>
+                <input name="email" type="email" class="form-control" id="exampleInputPassword1"
+                       placeholder="Iveskite El.paštą">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Tel.numerį</label>
+                <input name="text" type="text" class="form-control" id="exampleInputPassword1"
+                       placeholder="Iveskite tel.nr">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1"> Slaptažodis</label>
+                <input name="password" type="password" class="form-control" id="exampleInputPassword1"
+                       placeholder="Iveskite Slaptažodį">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Pakartoti slaptažodį</label>
+                <input name="password" type="password" class="form-control" id="exampleInputPassword1"
+                       placeholder="Pakartoti slaptažodį">
+            </div>
 
-            <label for="email"><b>Pavardė</b></label>
-            <input type="text" placeholder="Iveskite Pavardę" name="surname" id="surname" required>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 
-            <label for="email"><b>el.paštas</b></label>
-            <input type="text" placeholder="Iveskite El.paštą" name="email" id="email" required>
 
-            <label for="email"><b>tel.numeris</b></label>
-            <input type="text" placeholder="Iveskite tel.numerį" name="telnumber" id="telnumber" required>
 
-            <label for="psw"><b>Slaptažodis</b></label>
-            <input type="password" placeholder="Iveskite Slaptažodį" name="pass" id="pass" required>
-
-            <label for="psw-repeat"><b>Pakartoti Slaptažodi</b></label>
-            <input type="password" placeholder="Pakartoti slaptažodį" name="pass-repeat" id="pass-repeat" required>
-            <hr>
-
-            <button type="submit" class="registerbtn">Registruotis</button>
-        </div>
-
-        <div class="container signin">
-            <p>Jau turite paskyrą? <a href="#">Prisijungti</a>.</p>
-        </div>
-    </form>
-
-<?php $this->view("sportClub/footers"); ?>
+<?php $this->view("sportClub/footers", $data); ?>

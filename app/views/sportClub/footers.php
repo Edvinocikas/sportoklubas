@@ -1,7 +1,7 @@
-<footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer" style="height: 70px">
+<footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer" style="height: 70px;background-color: #545454" >
     <div class="container-fluid tm-container-small">
         <div class="row">
-            <div class="col-lg-8 col-md-7 col-12 px-5 mb-3" style="padding-top: 20px;color: black">
+            <div class="col-lg-8 col-md-7 col-12 px-5 mb-3" style="padding-top: 20px;color: white">
                 2021 Edvin Vasilionok. All rights reserved.
             </div>
         </div>

@@ -4,8 +4,14 @@ Class Login extends Controller
 {
     public function index()
     {
-        $this->view("sportClub/login");
+        $data['page_title'] = "Login";
+
+        if(isset($_POST['email']))
+        {
+            $model = $this->loadModel("user");
+            $model->login($_POST);
+        }
+
+        $this->view("sportClub/login",$data);
     }
-
-
 }

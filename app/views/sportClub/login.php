@@ -1,17 +1,19 @@
-<?php $this->view("sportClub/header"); ?>
+<?php $this->view("sportClub/header", $data); ?>
 
-    <form action="action_page.php" method="post">
+    <div style="margin: auto; max-width: 600px;width: 100%;padding: 2em;padding-bottom: 17%">
+        <form method="post">
+            <div class="form-group">
+                <label for="exampleInputEmail1">El.paštas</label>
+                <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="El.paštas" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Slaptažodis</label>
+                <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Slaptažodis" required>
+            </div>
 
-        <div class="container">
-            <label for="uname"><b>El.paštas</b></label>
-            <input type="text" placeholder="Iveskite El.paštą" name="uname" required>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 
-            <label for="psw"><b>Slaptažodis</b></label>
-            <input type="password" placeholder="iveskite slaptažodį" name="psw" required>
-
-            <button type="submit">Prisijungti</button>
-        </div>
-
-    </form>
-
-<?php $this->view("sportClub/footers"); ?>
+<?php $this->view("sportClub/footers", $data); ?>

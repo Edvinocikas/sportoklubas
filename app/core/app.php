@@ -1,73 +1,38 @@
 <?php
-/* App Core class
- * Create URL & loads controller
- * URL format /controller/method/params
- */
 
-class App
+Class App
 {
-
-    protected $currentController = 'home';
-    protected $currentMethod = 'index';
+    protected $controller = "home";
+    protected $method = "index";
     protected $params = [];
 
     public function __construct()
     {
-        // print_r($this->getUrl());
+        $url = $this->splitURL();
 
-        $url = $this->getUrl();
-        // check if user asked for controller
-        if (isset($url[0])) {
-            // Look into controllers dir for the controller name
-            // if such file exists
-            if (file_exists('../app/controllers/' . ucfirst($url[0]) . '.php')) {
-                $this->currentController = ucfirst($url[0]);
-                // clean value that was taken
-                unset($url[0]);
-            }
+        if(file_exists("../app/controllers/". strtolower($url[0]) . ".php"))
+        {
+            $this->controller = strtolower($url[0]);
+            unset($url[0]);
         }
-        // Require the controller that user asked
-        require_once '../app/controllers/' . $this->currentController . '.php';
+        require "../app/controllers/". $this->controller . ".php";
+        $this->controller = new $this->controller;
 
-        // instanciate an objec of current class
-        // if entered pages
-        // Pages = new Pages;
-        $this->currentController = new $this->currentController;
-
-        // check for second(method) values in url params
-        if (isset($url[1])) {
-            // check if there is a method name in the class
-            if (method_exists($this->currentController, $url[1])) {
-                $this->currentMethod = $url[1];
-                // clean value that was taken
+        if (isset($url[1]))
+        {
+            if (method_exists($this->controller, $url[1]))
+            {
+                $this->method = $url[1];
                 unset($url[1]);
             }
         }
-
-        // to test if it works
-        // echo 'our current method is: ' . $this->currentMethod;
-
-        // Get params from url
-        if (isset($url[2])) {
-            $this->params = $url ? array_values($url) : [];
-        }
-        // print_r($this->params);
-
-        // we call current controller and method and params if present
-        call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
+        $this->params = array_values($url);
+        call_user_func_array([$this->controller,$this->method],$this->params);
     }
 
-    // echo url parameter
-    public function getUrl()
+    private function splitURL()
     {
-        if (isset($_GET['url'])) {
-            // trim  slash from the right
-            $url = rtrim($_GET['url'], '/');
-            // sanitize url
-            $url = filter_var($url, FILTER_SANITIZE_URL);
-            // make url into array
-            $url = explode('/', $url);
-            return $url;
-        }
+        $url = isset($_GET['url']) ? $_GET['url'] : "home";
+        return explode("/", filter_var(trim($url,"/"),FILTER_SANITIZE_URL));
     }
 }

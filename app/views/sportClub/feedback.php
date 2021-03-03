@@ -1,18 +1,18 @@
 <?php $this->view("sportClub/header"); ?>
 
-    <div class="container">
-        <form action="action_page.php">
+    <div class="container" style="width: 50%;padding-bottom: 69px">
+        <form action="action_page.php" method="post">
 
-            <label for="fname">Vardas</label>
+            <label class="color for="fname">Vardas</label>
             <input type="text" id="fname" name="firstname" placeholder="Tavo vardas..">
 
-            <label for="lname">Pavardė</label>
+            <label class="color for="lname">Pavardė</label>
             <input type="text" id="lname" name="lastname" placeholder="Tavo pavardė..">
 
-            <label for="subject">Tema</label>
+            <label class="color for="subject">Tema</label>
             <textarea id="subject" name="subject" placeholder="Rašyti kažką.." style="height:200px"></textarea>
 
-            <input type="submit" value="Submit">
+            <button type="submit" value="Submit">submit</button>
 
         </form>
     </div>
