@@ -5,8 +5,7 @@
 <div class="container tm-container-content" style="padding-top: 20px;padding-bottom: 20px;margin-right: auto">
     <div class="row tm-gallery">
 
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 border">
-
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 border" style="box-shadow: inset 0px 0px 15px 5px #FFFEFE;">
             <img src="<?= ASSETS ?>sportClub/img/6.jpg" alt="Image" class="img-fluid" style="height: 40%" width="100%">
             <div class="d-flex align-items-center justify-content-center">
                 <h2 class="font">Baseinai</h2>
@@ -20,7 +19,7 @@
                 <span></span>
             </div>
         </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 border ">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 border" style="box-shadow: inset 0px 0px 15px 5px #FFFEFE;">
             <img src="<?= ASSETS ?>sportClub/img/3.jpg" alt="Image" class="img-fluids" style="height: 40%" width="100%">
             <div class="d-flex align-items-center justify-content-center">
                 <h2 class="font">Soliariumai</h2>
@@ -33,7 +32,7 @@
                 <span></span>
             </div>
         </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 border ">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 border" style="box-shadow: inset 0px 0px 15px 5px #FFFEFE;">
 
             <img src="<?= ASSETS ?>sportClub/img/4.jpg" alt="Image" class="img-fluid" style="height: 40%" width="100%">
             <div class="d-flex align-items-center justify-content-center">
