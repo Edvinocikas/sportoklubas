@@ -1,6 +1,6 @@
 <?php $this->view("sportClub/header", $data); ?>
 
-    <div style="margin: auto; max-width: 600px;width: 100%;padding: 2em;padding-bottom: 17%;color: white">
+    <div style="margin: auto; max-width: 600px;width: 100%;padding: 2em;padding-bottom: 286px;color: white">
         <form method="post">
             <div class="form-group">
                 <label for="exampleInputEmail1">El.paštas</label>

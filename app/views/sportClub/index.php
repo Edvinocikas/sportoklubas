@@ -1,8 +1,6 @@
 <?php $this->view("sportClub/header"); ?>
 
-<div class="tm-hero d-flex img">
-
-</div>
+<div class="tm-hero d-flex img"></div>
 
 <div class="container tm-container-content" style="padding-top: 20px;padding-bottom: 20px;margin-right: auto">
     <div class="row tm-gallery">
